@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Our Farmers | HaritMarg Farmer Producer Company Ltd.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the proud farmer members of HaritMarg Farmer Producer Company Ltd. A farmer-owned and farmer-driven organization.">
+    <link crossorigin="anonymous" href="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/css/omgayatrinursery.webflow.shared.317fb73e5.css" integrity="sha384-MX+3PlplFIX5Gp9w0gh7hR2RvxtbT0sOvmUhZkx46ldod7HliekgKlhvtJDzQaOZ" rel="stylesheet" type="text/css"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
+
+    <link href="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/632754ee4d23be60b13a054a_62fce6f907590e3a6450c847_logo1%20(1).png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/632754f794be2a59333da250_62fce6f907590e3a6450c847_logo1%20(2).png" rel="apple-touch-icon" />
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z3P98C6D97"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        /* Header */
+        
+        header {
+            background: #2e5d2e;
+            padding: 15px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        
+        header h1 {
+            color: #fff;
+            font-size: 22px;
+            margin: 0;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        /* Hero Section */
+        
+        .hero {
+            position: relative;
+            min-height: 35vh;
+            /* adjust height */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        /* Dark overlay for text readability */
+        
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+        
+        .hero p {
+            font-size: 14px;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 16px;
+        }
+        /* Section */
+        
+        .section {
+            padding: 70px 20px;
+            background: #f7f9f6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 15px;
+            color: #2e5d2e;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 16px;
+            color: #555;
+        }
+        /* Farmers Content */
+        
+        .farmers-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .farmers-text {
+            flex: 1;
+        }
+        
+        .farmers-text h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2e5d2e;
+        }
+        
+        .farmers-text p {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        
+        .farmers-points {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .farmers-points li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .farmers-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .farmers-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+        }
+        
+        .image-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        /* Stats */
+        
+        .stats {
+            background: #ffffff;
+            padding: 60px 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-box {
+            background: #f1f4f0;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .stat-box h4 {
+            font-size: 36px;
+            color: #2e5d2e;
+            margin-bottom: 10px;
+        }
+        
+        .color {
+            color: black;
+        }
+        
+        .stat-box p {
+            font-size: 15px;
+            color: #555;
+        }
+        /* Footer */
+        
+        footer {
+            background: #2e5d2e;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>HaritMarg FPC</h1>
+            <nav class="nav-menu w-nav-menu" role="navigation">
+                <a aria-current="page" class="nav-link-white w-nav-link w--current" href="index.html">Home</a>
+                <a class="nav-link-white w-nav-link" href="about.html">About Us</a>
+                <a class="nav-link-white" href="product.html">Products</a>
+                <a class="nav-link-white w-nav-link" href="service.html">Services</a>
+                <a class="nav-link-white w-nav-link" href="infrastructure.html">Our Farmers</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+        <source src="hi.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h2>Our Farmers</h2>
+            <p>The backbone of HaritMarg Farmer Producer Company</p>
+        </div>
+    </section>
+
+
+    <!-- Farmers Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Farmers & Members</h2>
+            <p class="section-subtitle">
+                HaritMarg Farmer Producer Company Ltd. is owned and governed by its farmer members. Together, we build a sustainable and prosperous agricultural ecosystem.
+            </p>
+
+            <div class="farmers-content">
+                <div class="farmers-text">
+                    <h3>Farmer-Owned, Farmer-Led</h3>
+                    <p>
+                        Every farmer member is a stakeholder in our success. Through collective marketing, transparent pricing, and shared resources, we empower farmers to achieve better income and long-term sustainability.
+                    </p>
+
+                    <ul class="farmers-points">
+                        <li>✔ Democratic and farmer-managed organization</li>
+                        <li>✔ Fair prices and timely payments</li>
+                        <li>✔ Market linkage with buyers and traders</li>
+                        <li>✔ Guidance, schemes, and technical support</li>
+                    </ul>
+                </div>
+
+                <div class="farmers-image">
+                    <img src="https://www.sathguru.com/report/whither-agtech-in-india/images/services.jpg" alt="HaritMarg Farmers">
+                    <div class="image-caption">
+                        Proud members of HaritMarg Farmer Producer Company Ltd.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h4>500+</h4>
+                    <p>Farmer Members</p>
+                </div>
+                <div class="stat-box">
+                    <h4>10+</h4>
+                    <p>Villages Covered</p>
+                </div>
+                <div class="stat-box">
+                    <h4>100%</h4>
+                    <p>Farmer-Owned</p>
+                </div>
+                <div class="stat-box">
+                    <h4>365</h4>
+                    <p>Days of Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="section-2 footer " id="stats ">
+        <div class="container-4 ">
+            <div class="footer-contianer ">
+                <div class="global-footer phone-clmm-gap ">
+                    <div class="footer-grid ">
+                        <div class="info-card " id="w-node-f6e4dc1d-9a67-f2f8-6be8-edf5e04e5bd2-3ebfe8ae ">
+                            <div class="_1st-box ">
+                                <div class="footer-title-5 ">Contact us</div>
+                                <div class="sub-heading-box ">
+                                    <h1 class="heading-66 ">Address:</h1>
+                                    <p class="short-about text-width-80 ">Ijali Village, Mudkhed Taluka, Nanded District, Maharashtra, India</p>
+                                </div>
+                            </div>
+                            <div class="_2nd-box ">
+                                <div class="inner-box ">
+                                    <h1 class="heading-66 margin-less ">Phone:</h1>
+                                    <a class="link-block-4 w-inline-block " href="# ">
+                                        <div class="text-block-27 ">+91-9112767997</div>
+                                    </a>
+                                </div>
+                                <div class="inner-box ">
+
+                                </div>
+                            </div>
+                            <div class="footer-divider-copy "></div>
+                        </div>
+                        <div class="info-card " id="w-node-f6e4dc1d-9a67-f2f8-6be8-edf5e04e5be9-3ebfe8ae ">
+                            <div class="_1st-box ">
+                                <div class="footer-title-5 ">Featured links</div>
+                                <div class="sub-heading-box ">
+                                    <div class="links-box ">
+                                        <a class="footer-nav-link " href="about.html">About Us</a>
+                                        <a class="footer-nav-link " href="product.html">Products</a>
+                                        <a class="footer-nav-link " href="infrastructure.html ">Our Farmers</a>
+                                    </div>
+                                </div>
+                                <div class="footer-divider-copy "></div>
+                            </div>
+                        </div>
+                        <div class="info-card " id="w-node-f6e4dc1d-9a67-f2f8-6be8-edf5e04e5bf6-3ebfe8ae ">
+                            <div class="_1st-box ">
+                                <div class="footer-title-5 ">Email:</div>
+                                <a class="link-block-4 w-inline-block " href="satyapalmungal3112@gmail.com?subject=Hello ">
+                                    <div class="text-block-27 ">satyapalmungal3112@gmail.com</div>
+
+                                </a><br>
+                                <br>
+
+
+                                <div class=" text-success">
+                                    <P class="color">@ 2026HaritMarg Farmer Producer Company Ltd. |Farmer-Owned Organization
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="footer-divider-copy "></div>
+                        </div>
+                        <div class="info-card f-align-right " id="w-node-f6e4dc1d-9a67-f2f8-6be8-edf5e04e5c03-3ebfe8ae ">
+                            <div class="_1st-box ">
+                                <div class="footer-title-5 "></div>
+
+                            </div>
+                            <div class="footer-divider-copy "></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://webflow.com -->
+<!-- Last Published: Fri Jan 09 2026 12:23:31 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="omgayatrinursery.webflow.io" data-wf-page="688349c9760e41db9764bd12" data-wf-site="6324331488eeaaad6ed0be97">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Product Catalogue - OMGayatri Nursery</title>
+    <meta content="Explore our wide range of vegetable, fruit, flower, and grafted plants" property="og:title" />
+    <meta content="OMGayatri Nursery offers premium quality plants including vegetables, fruits, flowers, grafted plants, and cash crops" property="twitter:title" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link crossorigin="anonymous" href="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/css/omgayatrinursery.webflow.shared.317fb73e5.css" integrity="sha384-MX+3PlplFIX5Gp9w0gh7hR2RvxtbT0sOvmUhZkx46ldod7HliekgKlhvtJDzQaOZ" rel="stylesheet" type="text/css"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic", "Marcellus:regular", "Poppins:300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Noto Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic:cyrillic,latin,latin-ext,vietnamese"]
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        ! function(o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            n.className += t + "js",
+                ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/632754ee4d23be60b13a054a_62fce6f907590e3a6450c847_logo1%20(1).png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/632754f794be2a59333da250_62fce6f907590e3a6450c847_logo1%20(2).png" rel="apple-touch-icon" />
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z3P98C6D97"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('set', 'developer_id.dZGVlNj', true);
+        gtag('js', new Date());
+        gtag('config', 'G-Z3P98C6D97');
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
+    <style>
+        {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom styles for product variations */
+        
+        .product-variations-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            overflow-y: auto;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .product-variations-content {
+            background: white;
+            max-width: 1400px;
+            margin: 40px auto;
+            border-radius: 15px;
+            padding: 40px;
+            position: relative;
+            animation: slideUp 0.4s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .close-variations {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: all 0.3s ease;
+        }
+        
+        .close-variations:hover {
+            background: #c0392b;
+            transform: rotate(90deg);
+        }
+        
+        .variations-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .variations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .variation-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            background: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .variation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            border-color: #4CAF50;
+        }
+        
+        .variation-img-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .variation-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .variation-card:hover .variation-img {
+            transform: scale(1.05);
+        }
+        
+        .variation-title {
+            color: #2e8b57;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .variation-details {
+            text-align: left;
+            margin-top: 15px;
+            flex-grow: 1;
+        }
+        
+        .variation-details p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .variation-details strong {
+            color: #333;
+        }
+        
+        .variation-chart-container {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .variation-chart {
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .variation-price {
+            background: linear-gradient(135deg, #4CAF50, #2e8b57);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 15px;
+            display: inline-block;
+        }
+        
+        .variation-features {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+        
+        .variation-features li {
+            margin-bottom: 5px;
+            color: #666;
+            position: relative;
+        }
+        
+        .variation-features li:before {
+            content: "✓";
+            color: #4CAF50;
+            position: absolute;
+            left: -20px;
+            font-weight: bold;
+        }
+        /* Product card clickable style */
+        
+        .product-card-3 {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card-3:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card-3:hover:after {
+            content: "Click to view varieties →";
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+        /* Responsive styles */
+        
+        @media (max-width: 1200px) {
+            .variations-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .product-variations-content {
+                padding: 20px;
+                margin: 20px;
+            }
+            .variations-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .variation-img-container {
+                height: 180px;
+            }
+        }
+        /* Loading animation */
+        
+        .loading-variations {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #4CAF50;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-hero-box flix-padding bg-off-green">
+        <div class="product_page-wrapper">
+            <div class="banner-text-box">
+                <div class="div-content-hero _60" data-w-id="1d00e5a9-7f27-808a-fb90-01d7502ba1cb" style="opacity:0">
+                    <h2 class="main-hero-heading non-responsive _333">
+                        Product Catalogue<br/>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="navigation w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner">
+            <div class="navbar-background"></div>
+            <div class="container nav-container">
+                <a class="brand w-nav-brand" href="#" target="_blank">
+                    <img alt="" class="logo" loading="lazy" src="" />
+                </a>
+                <div class="menu-button w-nav-button" data-w-id="d2b625f4-a6ba-9fb4-b3e1-7172a1ceb349" id="w-node-d2b625f4-a6ba-9fb4-b3e1-7172a1ceb349-a1ceb344">
+                    <div class="menu-button-line-1 whiter"></div>
+                    <div class="menu-button-line-2 whiter"></div>
+                    <div class="menu-button-line-3 whiter"></div>
+                </div>
+                <nav class="nav-menu w-nav-menu" role="navigation">
+                    <a class="nav-link-white w-nav-link" href="index.html">Home</a>
+                    <a class="nav-link-white w-nav-link" href="about.html">About Us</a>
+                    <a aria-current="page" class="nav-link-white w--current" href="product.html">Products</a>
+                    <a class="nav-link-white" href="grafting.html">Grafting</a>
+                    <a class="nav-link-white w-nav-link" href="service.html">Services</a>
+                    <a class="nav-link-white w-nav-link" href="infrastructure.html">Our Farmers</a>
+                </nav>
+                <div class="div-block">
+                    <a class="wh-button w-inline-block" href="https://wa.me/9112767997" target="_blank">
+                        <div class="whatsapp-button-2">
+                            <img alt="chatapp" class="image-118" loading="lazy" src="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/6333d8a484ac49579413a3a5_Whatsapp.svg" />
+                            <h1 class="wa-title-2">Message us</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Variations Modal Container -->
+    <div id="productVariationsContainer" class="product-variations-container">
+        <div class="product-variations-content">
+            <button class="close-variations" onclick="closeVariations()">×</button>
+            <div id="variationsContent">
+                <!-- Content will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
+    <div class="product-tabs">
+        <div class="product-section-heading">
+            <h1 class="heading-70">Select a Category</h1>
+            <p class="hero-banner-para-home centre">Click on any product to view all available varieties</p>
+        </div>
+        <div class="product-section-wrapper">
+            <div class="tabs w-tabs" data-current="Tab 2" data-duration-in="300" data-duration-out="100" data-easing="ease">
+                <div class="tabs-content-3 w-tab-content">
+                    <!-- VEGETABLES TAB -->
+                    <div class="w-tab-pane" data-w-tab="Tab 1">
+                        <div class="tab-body-wrapper">
+                            <div class="product-grid">
+                                <!-- Tomato Card -->
+                                <div class="product-card-3" onclick="showProductVariations('tomato')">
+                                    <h1 class="heading-69 centre green small ex-small text">Tomato</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6f5f0a303eb1e0bba1_Tomato.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/64c352dc13204b77e3557b19_Tomato.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Solanum lycopersicum</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b690ad2bf193cb5f14d25_Tomato.svg" />
+                                    </div>
+                                </div>
+                                <!-- Brinjal Card -->
+                                <div class="product-card-3" onclick="showProductVariations('brinjal')">
+                                    <h1 class="heading-69 centre green small ex-small text">Brinjal</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6d793ded354a8ffe0d_Brinjal-%20Gallline.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/65488c7abba4fa0fbdb6320a_Brinjal.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Solanum melongena</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b690914319601f84e0bcd_Brinjal.svg" />
+                                    </div>
+                                </div>
+                                <!-- Chilli Card -->
+                                <div class="product-card-3" onclick="showProductVariations('chilli')">
+                                    <h1 class="heading-69 centre green small ex-small text">Chilli</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6d1be5d518cc6c6eaf_Chilli.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/65488c7ac7a8b83ccedeaad3_Chilli.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Capsicum frutescens</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b69096cfcda74defd3987_Marigold.svg" />
+                                    </div>
+                                </div>
+                                <!-- Chilli Picador Card -->
+                                <div class="product-card-3" onclick="showProductVariations('chilli-picador')">
+                                    <h1 class="heading-69 centre green small ex-small text">Chilli Picador</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6d35711f252f30a1d6_Chilli%20Picador.png" />
+                                        </div>
+                                        <div class="product-img-box"></div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Capsicum frutescens</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b6909ba435e30d89e5533_Chilli%20Picador.svg" />
+                                    </div>
+                                </div>
+                                <!-- Capsicum Card -->
+                                <div class="product-card-3" onclick="showProductVariations('capsicum')">
+                                    <h1 class="heading-69 centre green small ex-small text">Capsicum</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/6452333c3303ce0a3b416993_Capsicum.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/64c352dc98f9b238325882da_Capsicum.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Capsicum annuum</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b6909837f4806b6e3deeb_Capsicum.svg" />
+                                    </div>
+                                </div>
+                                <!-- Bitter Gourd Card -->
+                                <div class="product-card-3" onclick="showProductVariations('bitter-gourd')">
+                                    <h1 class="heading-69 centre green small ex-small text">Bitter Gourd</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6d7bce78507cbd865c_Bitter%20gourd.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/65488c7a09c1e7779fda65f5_Bitter%20Gourd.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Momordica charantia</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b690914319667df4e0bc9_Bitter%20gourd.svg" />
+                                    </div>
+                                </div>
+                                <!-- Bottle Gourd Card -->
+                                <div class="product-card-3" onclick="showProductVariations('bottle-gourd')">
+                                    <h1 class="heading-69 centre green small ex-small text">Bottle Gourd</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6c6e31ffb4730d7c79_Bottle%20gourd.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/6450d0587bf5df2b173015c9_Bottle%20gourd.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Lagenaria siceraria</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b690914319667df4e0bc9_Bitter%20gourd.svg" />
+                                    </div>
+                                </div>
+                                <!-- Ridge Gourd Card -->
+                                <div class="product-card-3" onclick="showProductVariations('ridge-gourd')">
+                                    <h1 class="heading-69 centre green small ex-small text">Ridge Gourd</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6f35711fd1a530a1f7_Ridge%20gourd.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/6450d05b5193ea2aad9c4a77_Ridge%20gourd.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Luffa acutangula</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b690914319667df4e0bc9_Bitter%20gourd.svg" />
+                                    </div>
+                                </div>
+                                <!-- Cabbage Card -->
+                                <div class="product-card-3" onclick="showProductVariations('cabbage')">
+                                    <h1 class="heading-69 centre green small ex-small text">Cabbage</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6de44f1fc874ef9a0d_Cabbage.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/6450d059fbafcdc921f2987f_cabbage.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Brassica oleracea var. capitata</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b690914319601f84e0bcd_Brinjal.svg" />
+                                    </div>
+                                </div>
+                                <!-- Cauliflower Card -->
+                                <div class="product-card-3" onclick="showProductVariations('cauliflower')">
+                                    <h1 class="heading-69 centre green small ex-small text">Cauliflower</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6d49862524c4ecfcd7_Cauliflower.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/6450d059465b2b290b1296be_cauliflower.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Brassica oleracea var. botrytis</em>
+                                        </p>
+                                    </div>
+                                    <div class="chart-info">
+                                        <h1 class="heading-69 centre green small ex-small">Season/Availability:</h1>
+                                        <img alt="" class="chart" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644b690914319601f84e0bcd_Brinjal.svg" />
+                                    </div>
+                                </div>
+                                <!-- Drum Stick Card -->
+                                <div class="product-card-3" onclick="showProductVariations('drum-stick')">
+                                    <h1 class="heading-69 centre green small ex-small text">Drum Stick</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/644bba6e1a3d246e441f1f48_Drum%20stick.png" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://cdn.prod.website-files.com/62f68b10992cf42543c2cc27/65488c7a33bcb7719b981649_Drumstick.png" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Moringa oleifera</em>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FRUITS TAB -->
+                    <div class="w-tab-pane w--tab-active" data-w-tab="Tab 2">
+                        <div class="tab-body-wrapper">
+                            <div class="product-grid">
+                                <!-- Grapes Card -->
+                                <div class="product-card-3" onclick="showProductVariations('grapes')">
+                                    <h1 class="heading-69 centre green small ex-small text">Banana</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://th.bing.com/th/id/OIP.haesFNKWFGFV8ljB9uP_rAHaE8?w=285&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="data:image/webp;base64,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"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Banana</em>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Watermelon Card -->
+                                <div class="product-card-3" onclick="showProductVariations('watermelon')">
+                                    <h1 class="heading-69 centre green small ex-small text">Turmeric</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="data:image/webp;base64,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"
+                                            />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://th.bing.com/th/id/OIP.gjLioIRsMq6I8d-dYCh91gHaE-?w=262&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Turmeric</em>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Muskmelon Card -->
+                                <div class="product-card-3" onclick="showProductVariations('marigold')">
+                                    <h1 class="heading-69 centre green small ex-small text">jasmine flower</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://th.bing.com/th/id/OIP.Ox6GW2biWAEsSTJpLt36SgHaE7?w=291&h=194&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://th.bing.com/th/id/OIP.wWzJOrR7ZINbTDFDwO3cwwHaFj?w=260&h=195&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>Jasminum officinale</em>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Sugarcane Card -->
+                                <div class="product-card-3" onclick="showProductVariations('sugarcane')">
+                                    <h1 class="heading-69 centre green small ex-small text">Sugarcane</h1>
+                                    <div class="product-img-grid">
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://th.bing.com/th/id/R.3bdc5b2d3d94d7282381554f9b6e9983?rik=Er7duqd9FVSvqw&riu=http%3a%2f%2f2.bp.blogspot.com%2f-x74zmcKeVhs%2fUm6XHlBt5AI%2fAAAAAAAAA4o%2fWOJ_A1_YfQA%2fs1600%2fistock_sugarcane1.jpg&ehk=w2gjdXibjnEQ0tA252CuDuqqkriJid%2fajZ9%2bex%2bA6DU%3d&risl=&pid=ImgRaw&r=0"
+                                            />
+                                        </div>
+                                        <div class="product-img-box">
+                                            <img alt="" class="image-123" loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS_PU11mo9d7A6dHqC9Nl52lpr2-K6BPDKfg&s" />
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="hero-banner-para-home left">
+                                            <span class="text-span">
+                                                    Scientific Name: <br/>
+                                                </span>
+                                            <em>sugarcane</em>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class=" section-2 footer " id="stats ">
+                <div class="container-4 ">
+                    <div class="footer-contianer ">
+                        <div class="global-footer phone-clmm-gap ">
+                            <div class="footer-grid ">
+                                <div class="info-card " id="w-node-f6e4dc1d-9a67-f2f8-6be8-edf5e04e5bd2-3ebfe8ae ">
+                                    <div class="_1st-box ">
+                                        <div class="footer-title-5 ">Contact us</div>
+                                        <div class="sub-heading-box ">
+                                            <h1 class="heading-66 ">Address:</h1>
+                                            <p class="short-about text-width-80 ">Ijali Village, Mudkhed Taluka, Nanded District, Maharashtra, India</p>
+                                        </div>
+                                    </div>
+                                    <div class="_2nd-box ">
+                                        <div class="inner-box ">
+                                            <h1 class="heading-66 margin-less ">Phone:</h1>
+                                            <a class="link-block-4 w-inline-block " href="# ">
+                                                <div class="text-block-27 ">+91-9112767997</div>
+                                            </a>
+                                        </div>
+                                        <div class="inner-box ">
+
+                                        </div>
+                                    </div>
+                                    <div class="footer-divider-copy "></div>
+                                </div>
+                                <div class="info-card " id="w-node-f6e4dc1d-9a67-f2f8-6be8-edf5e04e5be9-3ebfe8ae ">
+                                    <div class="_1st-box ">
+                                        <div class="footer-title-5 ">Featured links</div>
+                                        <div class="sub-heading-box ">
+                                            <div class="links-box ">
+                                                <a class="footer-nav-link " href="about.html ">About Us</a>
+                                                <a class="footer-nav-link " href="product.html ">Products</a>
+                                                <a class="footer-nav-link " href="infrastructure.html ">Our Farmers</a>
+                                            </div>
+                                        </div>
+                                        <div class="footer-divider-copy "></div>
+                                    </div>
+                                </div>
+                                <div class="info-card " id="w-node-f6e4dc1d-9a67-f2f8-6be8-edf5e04e5bf6-3ebfe8ae ">
+                                    <div class="_1st-box ">
+                                        <div class="footer-title-5 ">Email:</div>
+                                        <a class="link-block-4 w-inline-block " href="satyapalmungal3112@gmail.com?subject=Hello ">
+                                            <div class="text-block-27 ">satyapalmungal3112@gmail.com</div>
+
+                                        </a><br>
+                                        <br>
+
+
+                                        <div class=" text-success ">
+                                            <P class="color ">@ 2026HaritMarg Farmer Producer Company Ltd. |Farmer-Owned Organization
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="footer-divider-copy "></div>
+                                </div>
+                                <div class="info-card f-align-right " id="w-node-f6e4dc1d-9a67-f2f8-6be8-edf5e04e5c03-3ebfe8ae ">
+                                    <div class="_1st-box ">
+                                        <div class="footer-title-5 "></div>
+
+                                    </div>
+                                    <div class="footer-divider-copy "></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+            // COMPLETE PRODUCT VARIATIONS DATA
+            const productVariations = {
+                // FRUITS
+                'grapes': {
+                    title: 'Banana Varieties',
+                    description: 'Premium table Banana varieties suitable for Indian climate conditions.',
+                    variations: [{
+                        name: 'Thompson Seedless',
+                        image: 'https://th.bing.com/th/id/OIP.8o_GsLJfhxjH5qZ-YtnO4AHaER?w=280&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+                        scientificName: 'Banana',
+                        description: 'Classic seedless green bananas, sweet and versatile.',
+                        features: ['Seedless', 'High sugar content', 'Good shelf life', 'Popular variety']
+                    }, {
+                        name: 'Banana Dwarf Cavendish',
+                        image: 'data:image/webp;base64,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',
+                        scientificName: 'Banana Dwarf Cavendish',
+                        description: 'Compact dwarf variety with sweet flavor, ideal for small spaces.',
+                        features: ['Red color', 'Seedless', 'Crisp texture', 'Sweet-tart flavor']
+                    }, {
+                        name: 'Banana Red Globe',
+                        image: 'https://th.bing.com/th/id/OIP.ieepZS26UfYA7YRC46FucgHaL4?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3',
+                        scientificName: 'Banana Red Globe',
+                        description: 'Large, round red globe bananas with sweet flavor and smooth texture.',
+                        features: ['Red color', 'Rich flavor', 'High antioxidants', 'Late season']
+                    }]
+                },
+
+                'watermelon': {
+                    title: 'Turmeric Varieties',
+                    description: 'Sweet and juicy Turmeric varieties for summer harvest.',
+                    variations: [{
+                        name: 'Turmeric',
+                        image: 'https://th.bing.com/th/id/OIP.MlVUo8Qvl2NEUx4X2J2D4AHaFj?w=230&h=150&c=6&o=7&dpr=1.3&pid=1.7&rm=3',
+                        scientificName: 'Citrullus lanatus',
+                        description: 'Small, sweet icebox Turmeric perfect for small families.',
+                        features: ['Small size', 'Very sweet', 'Early maturing', 'Dark red flesh']
+                    }, {
+                        name: 'Turmeric Crimson Sweet',
+                        image: 'https://tse1.mm.bing.net/th/id/OIP.NGmVmpyM18Hgthy4afKoZAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+                        scientificName: 'Citrullus lanatus',
+                        description: 'Large, oblong Turmeric with sweet crimson red flesh.',
+                        features: ['Large size', 'Sweet flavor', 'Crimson red flesh', 'Good for slicing']
+                    }, {
+                        name: 'Turmeric POwder',
+                        image: 'https://www.naatigrains.com/image/cache/catalog/naatigrains-products/NG121/pure-turmeric-powder-hand-processed-solar-dried-stone-order-now-grinded-by-naati-grains-1000x1000.jpg',
+                        scientificName: 'Turmeric Powder',
+                        description: 'Turmeric powder is a bright yellow spice made from the root of the turmeric plant. It has a warm, bitter taste and is commonly used in cooking and traditional medicine.',
+                        features: ['Turmeric Powder', 'Bright yellow color', 'Warm, bitter taste', 'Used in cooking and medicine']
+                    }]
+                },
+
+                // FLOWERS
+                'marigold': {
+                    title: 'jasmine flower Varieties',
+                    description: 'Vibrant marigold flowers for decoration, festivals, and religious ceremonies.',
+                    variations: [{
+                        name: 'African Marigold (Large Flowered)',
+                        image: 'https://th.bing.com/th/id/OIP.QpcO6tpE1zvwKTau_L3A5AHaHa?w=179&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+                        scientificName: 'jasmine flower',
+                        description: 'Large, double flowers in bright yellow and orange colors.',
+                        features: ['Large flowers', 'Bright colors', 'Long lasting', 'Festival favorite']
+                    }, {
+                        name: 'French Marigold (Small Flowered)',
+                        image: 'https://th.bing.com/th/id/OIP.x15CJHa53wKk0pPr7E2NiwHaFj?w=192&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+                        scientificName: 'jasmine flower',
+                        description: 'Small, prolific flowers in various colors and patterns.',
+                        features: ['Prolific bloomer', 'Various colors', 'Compact growth', 'Good for borders']
+                    }, {
+                        name: 'Indian Jasmine (Small Flowered)',
+                        image: 'https://th.bing.com/th/id/OIP.I3Xk3q39d9xlOE2RFGcaZgHaHY?w=208&h=207&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+                        scientificName: 'jasmine flower',
+                        description: 'Small, fragrant white flowers commonly used in garlands and religious offerings.',
+                        features: ['Fragrant', 'Small white flowers', 'Used in garlands', 'Religious significance']
+                    }]
+                },
+
+                // CASH CROPS
+                'sugarcane': {
+                    title: 'Sugarcane Varieties',
+                    description: 'High-yield sugarcane varieties for sugar production and juice.',
+                    variations: [{
+                        name: 'CO 86032',
+                        image: 'https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/68834a3320cd2149e2314ce2_Sugarcane.webp',
+                        scientificName: 'Sugercane officinarum',
+                        description: 'High sugar content variety suitable for sugar mills.',
+                        features: ['High sucrose', 'Good yield', 'Disease resistant', 'Mill favorite']
+                    }, {
+                        name: 'CO 0238',
+                        image: 'https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/68834a3320cd2149e2314cfd_Sugarcane_Tray.webp',
+                        scientificName: 'Sugercane officinarum',
+                        description: 'Early maturing variety with good ratoon capacity.',
+                        features: ['Early maturing', 'Good ratoon', 'High fiber', 'Juice variety']
+                    }, {
+                        name: '93 56',
+                        image: 'https://www.shutterstock.com/image-photo/sugar-cane-plantation-growing-up-600w-2498743725.jpg',
+                        scientificName: 'Sugercane officinarum',
+                        description: 'Early maturing variety with good ratoon capacity.',
+                        features: ['Early maturing', 'Good ratoon', 'High fiber', 'Juice variety']
+                    }, ]
+                },
+
+            };
+
+            // Function to show product variations
+            function showProductVariations(productId) {
+                const productData = productVariations[productId];
+                const container = document.getElementById('productVariationsContainer');
+                const contentDiv = document.getElementById('variationsContent');
+
+                // Show loading
+                contentDiv.innerHTML = '<div class="loading-variations"><div class="spinner"></div></div>';
+                container.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+
+                // Simulate loading delay
+                setTimeout(() => {
+                            if (!productData) {
+                                contentDiv.innerHTML = `
+                            <div class="variations-header">
+                                <h1 class="heading-69 centre green">Product Details</h1>
+                                <p class="hero-banner-para-home centre">Varieties information will be added soon. Please contact us for details.</p>
+                            </div>
+                            <div class="centre">
+                                <a class="wh-button w-inline-block" href="https://wa.me/9112767997" target="_blank" style="margin-top: 30px;">
+                                    <div class="whatsapp-button-2">
+                                        <img alt="chatapp" class="image-118" loading="lazy" src="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/6333d8a484ac49579413a3a5_Whatsapp.svg"/>
+                                        <h1 class="wa-title-2">Contact for Details</h1>
+                                    </div>
+                                </a>
+                            </div>
+                        `;
+                                return;
+                            }
+
+                            // Build the HTML content
+                            let html = `
+                        <div class="variations-header">
+                            <h1 class="heading-69 centre green">${productData.title}</h1>
+                            <p class="hero-banner-para-home centre">${productData.description}</p>
+                        </div>
+                        <div class="variations-grid">
+                    `;
+
+                            productData.variations.forEach((variation, index) => {
+                                        html += `
+                            <div class="variation-card">
+                                <div class="variation-img-container">
+                                    <img src="${variation.image}" alt="${variation.name}" class="variation-img">
+                                </div>
+                                <h3 class="variation-title">${variation.name}</h3>
+                                <div class="variation-details">
+                                    <p><strong>Scientific Name:</strong><br><em>${variation.scientificName}</em></p>
+                                    <p>${variation.description}</p>
+                                    
+                                    ${variation.features ? `
+                                    <ul class="variation-features">
+                                        ${variation.features.map(feature => `<li>${feature}</li>`).join('')}
+                                    </ul>
+                                    ` : ''}
+                                    
+                                </div>
+                                
+                                ${variation.seasonChart ? `
+                                <div class="variation-chart-container">
+                                    <h4 class="heading-69 centre green small ex-small">Season/Availability:</h4>
+                                    <img src="${variation.seasonChart}" alt="Season Chart" class="variation-chart">
+                                </div>
+                                ` : ''}
+                            </div>
+                        `;
+                        }
+                        );
+
+                        html += `</div>`;
+
+                        // Add contact button
+                        html += `
+                        <div class="centre" style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #f0f0f0;">
+                            <p class="hero-banner-para-home centre">Interested in any variety? Contact us for bulk orders and pricing.</p>
+                            <a class="wh-button w-inline-block" href="https://wa.me/9112767997" target="_blank" style="margin-top: 20px;">
+                                <div class="whatsapp-button-2">
+                                    <img alt="chatapp" class="image-118" loading="lazy" src="https://cdn.prod.website-files.com/6324331488eeaaad6ed0be97/6333d8a484ac49579413a3a5_Whatsapp.svg"/>
+                                    <h1 class="wa-title-2">WhatsApp for Orders</h1>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+
+                        contentDiv.innerHTML = html;
+
+                        // Scroll to top of modal
+                        container.scrollTop = 0;
+                    }
+                    , 300);
+                }
+
+                // Function to close variations modal
+                function closeVariations() {
+                    const container = document.getElementById('productVariationsContainer');
+                    container.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+
+                // Close modal when clicking outside content
+                document.getElementById('productVariationsContainer').addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeVariations();
+                    }
+                });
+
+                // Close with Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        closeVariations();
+                    }
+                });
+
+                // Initialize all product cards with click events
+                document.addEventListener('DOMContentLoaded', function() {
+                    // All product cards are already initialized with onclick attributes
+                    console.log('Product catalogue initialized');
+                });
+        </script>
+</body>
+
+</html>
